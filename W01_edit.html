@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+		 
+		<link rel="shortcut icon" href="../favicon.ico" />   
+		<link rel="stylesheet" type="text/css" media="screen" href="../css/jquery-ui-1.10.1.css"/>	
+		<link rel="stylesheet" type="text/css" media="screen" href="../css/dropdiv.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="../css/baseSite.css" /> 
+		<link rel="stylesheet" type="text/css" media="screen" href="../css/liwa_grid.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="../css/liwatag.css" />	
+		<link rel="stylesheet" type="text/css" media="screen" href="css/001_edit.css" />
+
+		<script type="text/javascript" src="../js/jquery-3.4.0.js"></script>
+		<script type="text/javascript" src="../js/dropdiv.js"></script>		
+		<script type="text/javascript" src="../js/moment.js"></script>		
+		<script type="text/javascript" src="../js_en/baseSite.js"></script>
+		<script type="text/javascript" src="../js/jquery-ui.min.js"></script>	
+		<script type="text/javascript" src="../js/jquery.fileupload.js"></script>
+		<script type="text/javascript" src="js_en/001_edit.js"></script>
+	</head>	
+	<body>
+		<header>
+			<div class="topheadPanel">
+				<div class="titlePanel">
+					<div class="namePanel">				
+						<img src="" height="48" width="48"/>
+						<h1></h1>
+					</div>
+				</div>
+				<div class="sysbtnPanel PC">
+					<div class="sysbtnBox Main">
+						<div class="sysIcon logout"></div>
+						<div class="sysIcon expand"></div>
+					</div>
+					<div class="sysbtnBox sub">
+						<div class="sysIcon help"></div>
+						<div class="sysIcon search"></div>
+						<div class="sysIcon userIcon">
+							<img class="userPic" src="" width="42" height="42" />
+						</div>
+					</div>
+				</div>
+				<div class="sysbtnPanel mobile">
+					<div class="sysbtnBox sub">
+						<div class="sysIcon help"></div>
+						<div class="sysIcon search"></div>
+						<div class="sysIcon userIcon">
+							<img class="userPic" src="" width="42" height="42" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="clear"></div>		
+		<div class="spacerPanel">
+			<div class="progBox Main">
+				<div class="top-icon progA03"></div>
+				<h3></h3>
+				<div class="sysIcon quickProg"></div>
+			</div>								
+			<div class="progBox Search hidden">
+				<div class="transbasePanel">
+					<div class="searchPanel">
+						<input type="text" id="searchTxt" name="searchTxt" value="" placeholder="用tag搜尋, 以逗號區隔" />
+						<div class="top-icon goSearch"></div>
+					</div>
+				</div>
+			</div>
+			<div class="quickProgPanel hidden">
+				<div class="qbasePanel">
+					<div class="qBtn previous"></div>
+					<div class="qprogsPanel">
+					</div>	
+					<div class="qBtn next"></div>
+				</div>
+			</div>
+		</div>
+		<div id="mainContainer">
+			<div id="mainBox" class="mainPanel">			
+				<div id="divList" class="">						
+					<div class="basePanel">
+						<!--  程式模組編輯  -->	
+						<div class="editorPanel TM">
+							<div class="barPanel TM">程式模組資料</div>
+							<div class="bar-icon add"></div>
+							<div class="bar-icon import"></div>
+							<div class="bar-icon menu"></div>
+							<div class="bar-icon config hidden"></div>
+										
+							<div class="wrapperPanel TM">
+								<div class="colPanel topCol">
+									<em>*</em>
+									<div id="lbRequired">必填</div>
+									<div class="saveBlock TM hidden">
+										<div class="top-icon save TM"></div>
+										<div class="top-icon cancel TM"></div>
+									</div>
+								</div>									
+								<div class="colPanel">
+									<label class="edCommon Required" for="">程式ID</label>
+									<input type="text" id="progID" name="progID" value=""/>
+								</div>
+								<div class="colPanel">
+									<label class="edCommon Required" for="">程式模組</label>
+									<input type="text" id="progName" name="progName" value=""/>
+								</div>
+								<div class="colPanel">
+									<label class="edCommon Required" for="">表單庫名稱</label>
+									<input type="text" id="LMName" name="LMName" value=""/>
+								</div>	
+								<div class="colPanel">
+									<label class="edCommon Required" for="">程式路徑</label>
+									<input type="text" id="slink" name="slink" value=""/>
+								</div>
+								<div class="colPanel">
+									<label class="edCommon Required" for="">權限下限</label>
+									<input type="number" id="authLimit" name="authLimit" value="1" min="0" max="9" placeholder="請輸入數字1-9"/>
+								</div>
+								<div class="colPanel">
+									<label class="edCommon Required" for="">所屬團隊</label>
+									<div class="colBox">
+										<div id="divOwner" class="dropdiv" style="">
+											<input id="owner" type="text" class="field" name="owner" value="" data-id="" readonly="readonly"/>
+											<div class="btnDrop"></div>
+											<ul id="ownerList" class="listx hidden">
+											</ul>
+										</div>
+									</div>	
+								</div>
+								<div class="colPanel">
+									<label class="edCommon Required" for="">匯出路徑</label>
+									<div class="colBox">
+										<div id="divExportPath" class="dropdiv" style="">
+											<input id="exportPath" type="text" class="field" name="exportPath" value="" data-id="" readonly="readonly"/>
+											<div class="btnDrop"></div>
+											<ul id="exportPathList" class="listx hidden">
+											</ul>
+										</div>	
+									</div>
+								</div>
+								<div class="colPanel">
+									<label class="edCommon Required" for="">語言</label>
+									<input type="text" id="lang" name="lang" value="tw"/>
+								</div>
+								<div class="colPanel">
+									<label class="edCommon" for="">表單庫圖示</label>
+									<div class="colBox">
+										<div id="divGroupName" class="dropdiv" style="">
+											<input id="groupName" type="text" class="field" name="groupName" value="" data-id="" readonly="readonly"/>
+											<div class="btnDrop"></div>
+											<ul id="groupNameList" class="listx hidden">
+												<li data-src="../syspics/config.png">config</li>
+												<li data-src="../syspics/forms.png">forms</li>
+												<li data-src="../syspics/reports.png">reports</li>
+												<li data-src="">自訂</li>
+											</ul>
+										</div>
+										<div class="imgPanel">
+											<div class="imgContainer">
+												<img id="imgPath" src="" width="100" height="100"/>
+											</div>
+										</div>	
+									</div>
+								</div>							
+							</div>
+						</div>
+						<div class="gridPanel TM hidden" data-option="1">
+							<div class="tblPanel TM">
+								<div class="barPanel listTM">程式列表</div>
+								<div class="bar-icon Dfilter"></div>
+								<div class="bar-icon addOne"></div>
+								<div class="bar-icon batchDel"></div>
+								<!-- <div class="top-icon Dclose grid"></div> -->
+								<div class="theadPanel">
+									<div class="dataPanel">
+										<div class="tcPanel iPhone">
+											<div class="thPanel progName" data-order="progName">程式模組</div>
+										</div>
+										<div class="tcPanel iPad">
+											<div class="thPanel slink" data-order="slink">程式路徑</div>
+											<div class="thPanel LMName" data-order="LMName">表單庫名稱</div>
+										</div>
+										<div class="tcPanel PC">
+											<div class="thPanel groupName" data-order="groupName">程式類別</div>
+											<div class="thPanel authLimit" data-order="authLimit">最低權限</div>
+										</div>
+									</div>								
+								</div>
+								<div class="outListPanel TM">
+									<div class="listPanel TM">
+									</div>	
+								</div>		
+							</div>
+							<div class="pagePanel">
+								<div class="pageBox wider">1...</div>
+								<div class="pageBox">&lt;</div>
+								<div class="pageBox"></div>
+								<div class="pageBox"></div>
+								<div class="pageBox"></div>
+								<div class="pageBox"></div>
+								<div class="pageBox"></div>
+								<div class="pageBox"></div>
+								<div class="pageBox"></div>
+								<div class="pageBox"></div>
+								<div class="pageBox"></div>
+								<div class="pageBox"></div>
+								<div class="pageBox wider"></div>
+								<div class="pageJump">
+									<input id="edPage" value="1" title="輸入頁碼再按下[Enter]可直接跳轉"/>
+								</div>
+								<span class="pageNote"></span>
+								<div class="pageBox">&gt;</div>
+							</div>							
+						</div>
+					</div>
+				</div>
+			</div>							
+		</div> 
+		<!--  以下為對話盒  -->
+		<div id="dlgFile" title="Upload File" style="display:none;">
+			<input type="file" name="fileinput" id="fileinput"/>
+		</div>	
+		<div class="liwaModal msg hidden">
+			<div class="liwaModal-content">
+				<div class="top-icon Dclose inModal msg"></div>
+				<div class="dlgPanel msg">
+					<div class="msg liwa"></div>
+				</div>
+				<div class="btnPanel inModal">
+					<div class="top-icon DOK inModal msg"></div>
+				</div>			
+			</div>
+		</div>
+		<div class="liwaModal delete hidden">
+			<div class="liwaModal-content">
+				<div class="top-icon Dclose inModal delete"></div>
+				<div class="top-icon DCancel inModal delete"></div>
+				<div class="dlgPanel delete">
+					<div class="msg delete">是否刪除?</div>
+				</div>
+				<div class="btnPanel inModal">
+					<div class="top-icon DOK inModal delete"></div>
+				</div>				
+			</div>
+		</div>	
+		<div class="liwaModal settings hidden">
+			<div class="liwaModal-content">		
+				<div class="top-icon Dclose inModal settings"></div>
+				<div class="menuPanel">
+					<div class="btnItem D1">模組類別設定</div>
+				</div>	
+				<div class="contentPanel D1">			
+					<div class="wrapperPanel inModal settings">
+						<div class="itemList D1">
+
+						</div>					
+					</div>													
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="footer-body">
+			<div class="copyrights">
+				<span>© Liwasite </span>
+				<span id="cyear">2017</span>
+				<span>保留所有權利</span>
+			</div>
+		</div>				
+	</body>
+</html>

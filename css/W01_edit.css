@@ -1,0 +1,499 @@
+.mainPanel
+{
+		width: 100%;
+		min-width: 700px;
+		padding-left:2px;
+		box-sizing:border-box;
+}
+
+#divList
+{
+		position:absolute;
+		box-sizing: border-box;
+		left:0;
+		right:0;
+		top: 0px;
+		bottom:0px;
+		margin-left:0px;	
+		background-color:#FAFAFA;
+}
+
+.basePanel
+{
+		width: 100%;
+/*		min-height:420px;  */
+		height: 100%;
+		box-sizing:border-box;
+		float:left;	
+		position:relative;
+}
+
+.bar-icon.add
+{
+		left:73px;			
+}
+
+.wrapperPanel.TM
+{
+		max-width:1024px;
+		width:100%;
+		margin:0px auto;
+}
+
+#divOwner, #divExportPath, #divGroupName
+{
+		width:200px;
+}
+
+#divGroupName
+{
+		height:40px;
+}
+
+.dropdiv .field
+{
+		width:200px;
+}
+
+.wrapperPanel.TM .colPanel:last-child
+{
+		height:250px;
+}
+
+.wrapperPanel.TM .colPanel:last-child > .colBox
+{
+		height:200px;
+}
+
+.imgPanel
+{
+		display:inline-block;
+		width:100%;
+		min-height:120px;
+		height: calc(100% - 50px);
+		margin-top:3px;
+		overflow:hidden;	
+		position:relative;
+}
+
+.imgContainer
+{
+		width: 120px;
+		height:120px;
+		left:0%;
+		top:10px;  
+		padding-left:10px;
+		padding-top:10px;  
+		position:absolute;
+		cursor:pointer;
+		border:1px solid #004d1a;
+		box-sizing:border-box;
+}
+
+ /* gridPanel.TM starts */
+.bar-icon.addOne
+{
+		left:50px;
+}
+
+.bar-icon.batchDel
+{
+		left:97px;			
+}
+
+.gridPanel.TM .thPanel:not([data-order=""])
+{
+		cursor:pointer;
+		text-decoration: underline;
+}
+
+.dataPanel
+{
+		height:50px;
+		margin:0px;
+}
+
+.thPanel, .tdPanel
+{
+		text-align:center;
+}
+
+.tcPanel.iPhone
+{
+		width:40%;
+}
+
+.tcPanel.iPad
+{
+		width:40%;
+}
+
+.tcPanel.PC
+{
+		width:20%;
+}
+
+.tdPanel.iconPath
+{
+		padding-left:50px;
+		box-sizing:border-box;	
+		float:left;
+		border-radius:50%;
+		padding-top:5px;
+}
+
+.tdPanel.iconPath img
+{
+		border-radius:8px;
+}
+
+.thPanel.progName
+{
+		width:calc(100% - 110px);
+		float:right;
+		line-height:50px;
+		text-align:left;	
+}
+
+.tdPanel.progName
+{
+		width:calc(100% - 110px);
+		float:right;
+		text-align:left;
+}
+
+.thPanel.title.w4SelBox
+{
+		text-align:center;
+}
+
+.tdPanel.title.w4SelBox
+{
+		text-align:left;	
+}
+
+.thPanel.slink, .tdPanel.slink, .thPanel.LMName, .tdPanel.LMName
+{
+		width:50%;
+		line-height:50px;	
+}
+
+.thPanel.groupName, .tdPanel.groupName, .thPanel.authLimit, .tdPanel.authLimit
+{
+		width:50%;
+		line-height:50px;	
+}
+
+ /* gridPanel.TM ends */
+
+/* itemIndex starts */
+.drowBox 
+{
+		width:100%;
+		min-height:60px;
+		position:relative;
+}
+
+.drowBox:nth-child(2n)
+{
+		background-color:#DEDEDE;
+}
+
+.drowBox:nth-child(2n+1)
+{
+		background-color:#FFF;
+}
+
+.drowPanel 
+{
+		width:100%;
+		min-height:100%;
+		height:60px;
+		position:relative;
+}
+
+.ddataPanel {
+		 width:calc(100% - 50px);
+		 height:100%;
+}
+
+.dtdPanel {
+		 min-width:80px;
+		 width:10%;
+		 min-height:30px;
+		 float:left;
+		 margin-right:3px;
+		 font-size:1.1rem;
+		 cursor:pointer;
+}
+
+.dDelBox 
+{
+		width:35px;
+		height:35px;
+		border-radius:50%;
+		position:absolute;
+		top:10px;
+		right:5px;
+}
+
+.dDelBox:before
+{
+		content:"\e004";
+		font-family:liwaicon;
+		font-size:1.3rem;
+		color:#FF2100;
+		line-height:35px;
+}
+
+.deditPanel{
+		width:100%;
+		height:auto;
+		position:absolute;
+		top:0px;
+		left:0px;
+		border:2px solid #DCDCDC;
+		background-color:#fff;
+		z-index:10;
+}
+
+.deditPanel form
+{
+		height:200px;
+}
+
+.dinputPanel
+{
+		width:100%;
+		height:60px;
+}
+
+.txtBox
+{
+		 width:calc(100% - 5px);
+		 min-height:80px;
+		 font-size: 1rem;
+}
+
+.dbtnPanel
+{
+		width:100%;
+		height:50px;
+		float:none;
+		padding:5px;
+}
+
+.dbtnSave {
+		width:60px;
+		height:40px;
+		line-height:40px;
+		background-color:green;
+		color:#fff;
+		text-align:center;
+		font-size:1rem;
+		border-radius:5px;
+		margin-right:5px;
+		cursor:pointer;
+}
+
+.top-icon.Dclose.dedit
+{
+		width:35px;
+		height:35px;
+		position:absolute;
+		bottom:12px;
+		left:80px;
+		padding:0px;
+		background-color:transparent;
+}
+
+.top-icon.Dclose.dedit:before
+{
+		content:"\e104";
+		font-family:liwaicon;
+		font-size:1rem;
+		line-height:35px;
+		color:#666;
+}
+
+/* itemIndex ends */
+
+
+@media (max-width: 1024px)
+{
+	.mainPanel
+	{
+			min-width: calc(100% - 110px);
+	}
+	
+	.theadPanel, .listPanel
+	{
+			width:100%;
+	}	
+	
+	.settingsPanel
+	{
+			position:absolute;
+			right:5px;
+	}
+	
+	.top-icon.config
+	{
+			display:block;
+	}
+	
+	.top-icon.Dclose.settings
+	{
+			display:block;
+	}	
+}
+
+@media (max-width: 800px)
+{		
+		.gridPanel.TM .thPanel:nth-child(4), .listPanel.TM .tdPanel:nth-child(4)
+		{
+				width:22%;
+		}
+		
+		.gridPanel.TM .thPanel:nth-child(5), .listPanel.TM .tdPanel:nth-child(5)
+		{
+				display:none;
+		}		
+		
+		.gridPanel.TM .thPanel:nth-child(6), .listPanel.TM .tdPanel:nth-child(6)
+		{
+				width:31%;
+		}
+}
+
+@media (max-width: 600px)
+{
+		.mainPanel
+		{
+				min-width: 100%;
+				padding:0px;
+				height:610px;
+		}
+		
+		.sidePanel
+		{
+				height:610px;
+		}
+
+		.top-icon.menu
+		{
+				right:-20px;
+				top:-3px;
+		}
+		
+		.label-part.upper, .label-part.lower
+		{
+				padding:0px;
+		}
+		
+		.label-part.upper .labels-block span, .label-part.lower .labels-block span
+		{
+				font-size:11px;
+		}
+		
+		.col-part.upper
+		{
+				width:240px;
+		}  
+		
+		.filterPanel
+		{
+				height:80px;
+		}
+		
+		.half-part.filter_left, .half-part.filter_right
+		{
+				width:100%;
+				height:40px;
+		}
+		
+		.cell-Filter.labels
+		{
+				text-align:left;
+		}
+		
+		.gridPanel.TM .thPanel:first-child
+		{
+				width:20%;
+		}
+		
+		.gridPanel.TM .thPanel:nth-child(2)
+		{
+				width:76%;
+		}
+		
+		.gridPanel.TM .thPanel:nth-child(3), .gridPanel.TM .thPanel:nth-child(4), .gridPanel.TM .thPanel:nth-child(5), .gridPanel.TM .thPanel:nth-child(6) {
+				display:none;
+		}
+		
+		.listPanel.TM .tdPanel:first-child
+		{
+				width:20%;
+		}
+		
+		.listPanel.TM .tdPanel:nth-child(2)
+		{
+				width:76%;
+		}
+		
+		.listPanel.TM .tdPanel:nth-child(3), .listPanel.TM .tdPanel:nth-child(4), .listPanel.TM .tdPanel:nth-child(5), .listPanel.TM .tdPanel:nth-child(6) {
+				display:none;
+		}
+		
+		.gridPanel.T021D1 .thPanel:first-child
+		{
+				width:20%;
+		}
+		
+		.gridPanel.T021D1 .thPanel:nth-child(2)
+		{
+				width:76%;
+		}		
+		
+		.gridPanel.T021D1 .thPanel:nth-child(3), .gridPanel.T021D1 .thPanel:nth-child(4), .gridPanel.T021D1 .thPanel:nth-child(5)
+		{
+				display:none;
+		}
+		
+		.listPanel.T021D1 .tdPanel:first-child
+		{
+				width:20%;
+		}
+		
+		.listPanel.T021D1 .tdPanel:nth-child(2)
+		{
+				width:76%;
+		}
+		
+		.listPanel.T021D1 .tdPanel:nth-child(3), .listPanel.T021D1 .tdPanel:nth-child(4), .listPanel.T021D1 .tdPanel:nth-child(5)
+		{
+				display:none;
+		}
+		
+		.settingsPanel
+		{
+				width: 100%;
+				position: absolute;
+				top: 0px;
+				border: 0px;
+				height: 687px;
+				margin: 0px;
+		}
+		
+		.col-part.lower .input-block:last-child
+		{
+				position: absolute;
+				top: 160px;
+				left: 2px;			
+		}
+		
+		#memo
+		{
+				width:96%;
+		}				
+}
